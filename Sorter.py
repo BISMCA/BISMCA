@@ -2,13 +2,18 @@ import pandas as pd
 import streamlit as st
 from PIL import Image
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
+import urllib.request
+
 url = "https://raw.githubusercontent.com/BISMCA/Files/main/rev_sort.csv"
 rev_sort = pd.read_csv(url)
 
 #Streamlit Page
 st.cache(suppress_st_warning=True)
-#image1 = Image.open(r'C:\Users\ASUS\Desktop\BISMCA\Project B\Draft\sort.jpg')
-#st.image(image1, caption = 'Lets Travel')
+urllib.request.urlretrieve(
+  'https://github.com/BISMCA/Files/blob/e33c2ce8dbbf2e400cee59437aa8e5c15831fe6e/sort.jpg?raw=true',
+   "sort.png")
+img = Image.open("sort.png")
+st.image(img, caption = 'Lets Travel')
 
 st.subheader("Hi, you can check reviews of your favourite hotels here")
 
