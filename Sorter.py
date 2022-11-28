@@ -7,8 +7,8 @@ rev_sort = pd.read_csv(url)
 
 #Streamlit Page
 st.cache(suppress_st_warning=True)
-image1 = Image.open(r'C:\Users\ASUS\Desktop\BISMCA\Project B\Draft\sort.jpg')
-st.image(image1, caption = 'Lets Travel')
+#image1 = Image.open(r'C:\Users\ASUS\Desktop\BISMCA\Project B\Draft\sort.jpg')
+#st.image(image1, caption = 'Lets Travel')
 
 st.subheader("Hi, you can check reviews of your favourite hotels here")
 
