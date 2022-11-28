@@ -2,7 +2,8 @@ import pandas as pd
 import streamlit as st
 from PIL import Image
 from st_aggrid import GridOptionsBuilder, AgGrid, GridUpdateMode, DataReturnMode
-rev_sort = pd.read_csv(r'C:\Users\ASUS\Desktop\BISMCA\Project B\Draft\rev_sort.csv')
+url = "https://raw.githubusercontent.com/BISMCA/Files/main/rev_sort.csv"
+rev_sort = pd.read_csv(url)
 
 #Streamlit Page
 st.cache(suppress_st_warning=True)
